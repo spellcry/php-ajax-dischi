@@ -16,6 +16,15 @@
     <div id="app">
         <header class="main-header">
             <img src="../assets/spotify_logo.png" alt="">
+            <div class="filters">
+                <div class="filter">
+                    <label for="filter__genere">Genere</label>
+                    <select @change="fetchDisks" v-model="genreSelected" id="filter__genere" class="filter__genere">
+                        <option value="" selected>-- Scegli un genere --</option>
+                        <option v-for="genre in genres" :value="genre">{{ genre }}</option>                            
+                    </select>
+                </div>
+            </div>
         </header>
         <main class="main-content">
             <div class="container">

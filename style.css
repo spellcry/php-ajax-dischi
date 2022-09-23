@@ -54,6 +54,16 @@ img {
     gap: 2rem;
 }
 
+.main-header label {
+    margin-right: 1rem;
+    color: var(--white);
+    font-size: var(--font-filter);
+}
+
+.main-header select {
+    font-size: var(--font-filter);
+}
+
 /* #endregion Main Header */
 
 /* #region Main Content */
@@ -75,6 +85,7 @@ img {
     justify-content: center;
     flex-wrap: wrap;
     gap: var(--gap);
+    list-style-type: none;
 }
 
 .main-content .disks-list .col {
