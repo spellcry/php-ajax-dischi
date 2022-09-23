@@ -1,0 +1,134 @@
+/* #region Root */
+:root {
+    --text-dark: #888;
+    --light-grey: #2E3A46;
+    --dark-grey: #1E2D3B;
+    --white: #fff;
+    --gap: 2rem;
+    --gap-description: 1rem;
+    --font-family: 'Open Sans', sans-serif;
+    --font-filter: 1.2rem;
+}
+
+/* #endregion Root */
+
+/* #region Regole Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* #endregion Regole Reset */
+
+/* #region App */
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: var(--font-family);
+}
+
+/* #endregion App */
+
+/* #region Main Header */
+.main-header {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    background-color: var(--light-grey);
+}
+
+.main-header img {
+    max-width: 50px;
+    margin-right: auto;
+}
+
+.main-header .filters {
+    display: flex;
+    gap: 2rem;
+}
+
+/* #endregion Main Header */
+
+/* #region Main Content */
+.main-content {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    background-color: var(--dark-grey);
+}
+
+.main-content .container {
+    flex-basis: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.main-content .disks-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.main-content .disks-list .col {
+    flex-basis: calc(calc(100% - calc(var(--gap) * 4)) / 5);
+}
+
+/* #endregion Main Content */
+
+/* #region Card */
+.card {
+    height: 100%;
+    padding: 1rem;
+    background-color: var(--light-grey);
+    box-shadow: -3px 3px 10px rgba(255, 255, 255, 0);
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: -3px 3px 10px rgba(255, 255, 255, 0.4);
+}
+
+.card .card__img {
+    margin-bottom: var(--gap-description);
+    aspect-ratio: 1;
+}
+
+.card .card__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+.card .card__description .title {
+    margin-bottom: var(--gap-description);
+    font-size: 1.5rem;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.card .card__description .author,
+.card .card__description .year {
+    color: var(--text-dark);
+}
+
+.card .card__description .author {
+    font-size: 1.1rem;
+}
+
+.year {
+    font-size: 0.9rem;
+}
+
+/* #endregion Card */

@@ -9,16 +9,32 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
     <!-- AXIOS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0-0/axios.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <div id="app">
-        <div class="container">
-            <ul v-if="disks.length">
-                <li v-for="disk in disks">
-                    {{ disk.title }}
-                </li>
-            </ul>
-        </div>
+        <header class="main-header">
+            <img src="../assets/spotify_logo.png" alt="">
+        </header>
+        <main class="main-content">
+            <div class="container">
+                <ul v-if="disks.length" class="disks-list">
+                    <li v-for="disk in disks" class="col">
+                        <div class="card">
+                            <img :src="disk.poster" alt="" class="card__img">
+                            <div class="card__description">
+                                <h4 class="title">{{ disk.title }}</h4>
+                                <div class="author-year">
+                                    <p class="author">{{ disk.author }}</p>
+                                    <p class="year">{{ disk.year }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
     </div>
 
     <script src="./main.js"></script>
